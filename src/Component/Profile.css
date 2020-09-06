@@ -1,0 +1,9 @@
+/* .full{display: flex;} */
+.single{
+    border: 1px solid red;
+    background-color: blue;
+    padding: 20px;
+    width: 20%;
+    float: left !important;
+    display: inline-block;
+}
