@@ -10,7 +10,6 @@ const Profile = () => {
 
     const [cart, setCart] = useState([])
     const AddFriend = (person) => {
-        console.log('add', person.money)
         const newCart = [...cart, person]
         setCart(newCart)
     }
@@ -18,10 +17,15 @@ const Profile = () => {
         <div className="full">
             <h2>Facebook</h2>
             <h5>Request send: {cart.length}</h5>
+            <ul>
+                {
+                    AddFriend.map(data => <li>{data}</li>)
+                }
+            </ul>
             <Money val={cart}></Money>
             {
                 data.map(data => 
-                <Single val={data} handle={AddFriend}>
+                <Single val={data} pass={AddFriend} cham={AddFriend}>
                 </Single>)
             }
         </div>

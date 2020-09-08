@@ -13,7 +13,8 @@ const Single = (props) => {
             <img src={picture.large} alt=""/>
             <h3>{name.title + ' ' + name.first + ' ' + name.last}</h3>
             <p>Money: {money}</p>
-            <button onClick={() => props.handle(props.val)}>Add friend</button>
+            <button onClick={() => props.pass(props.val)}>Add friend</button>
+            <button onClick={() => props.champ(props.val)}>Cham</button>
             </div>
         </div>
     );
